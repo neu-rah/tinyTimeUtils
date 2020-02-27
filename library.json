@@ -1,0 +1,13 @@
+{
+  "name": "tinyTimeUtils",
+  "keywords": "time utils timeouts FPS blink",
+  "description": "Tiny easy timeouts, FPS and blinks without delay",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/neu-rah/tinyTimeUtils",
+    "branch": "master"
+  },
+  "frameworks": "arduino",
+  "platforms": "*"
+}

@@ -1,0 +1,53 @@
+-I/home/azevedo/Work/r-site.net/tinyTimeUtils/examples/no_delay_blinks/include
+-I/home/azevedo/Work/r-site.net/tinyTimeUtils/examples/no_delay_blinks/no_delay_blinks
+-I/home/azevedo/Work/r-site.net/tinyTimeUtils/src
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/cores/arduino
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/variants/eightanaloginputs
+-I/home/azevedo/.platformio/lib/Adafruit BLEFirmata_ID848
+-I/home/azevedo/.platformio/lib/Adafruit GFX Library_ID13
+-I/home/azevedo/.platformio/lib/Adafruit NeoPixel_ID28
+-I/home/azevedo/.platformio/lib/Adafruit PCD8544 Nokia 5110 LCD library_ID81
+-I/home/azevedo/.platformio/lib/Adafruit ST7735 and ST7789 Library_ID12
+-I/home/azevedo/Sketchbook/LIBDEV/AnsiStream/src
+-I/home/azevedo/Work/AM4/ArduinoMenu/src
+-I/home/azevedo/.platformio/lib/BLEPeripheral_ID259/src
+-I/home/azevedo/.platformio/lib/ClickEncoder_ID291
+-I/home/azevedo/.platformio/lib/Dump_ID1911/src
+-I/home/azevedo/.platformio/lib/ESP8266FtpServer_ID992
+-I/home/azevedo/.platformio/lib/ESP8266Ping_ID2072/src
+-I/home/azevedo/.platformio/lib/FastLED_ID126
+-I/home/azevedo/.platformio/lib/LCDMenuLib_ID769/src
+-I/home/azevedo/.platformio/lib/LiquidCrystal_ID887/src
+-I/home/azevedo/.platformio/lib/LiquidCrystal_PCF8574_ID1165/src
+-I/home/azevedo/.platformio/lib/LiquidMenu_ID671/src
+-I/home/azevedo/Sketchbook/LIBDEV/PCINT/src
+-I/home/azevedo/.platformio/lib/RTC_ID274/src
+-I/home/azevedo/.platformio/lib/SSD1306Ascii_ID5169/src
+-I/home/azevedo/.platformio/lib/SdFat_ID322/src
+-I/home/azevedo/Work/r-site.net/Serial13/include
+-I/home/azevedo/Work/r-site.net/Serial13/src
+-I/home/azevedo/.platformio/lib/Streaming_ID560
+-I/home/azevedo/.platformio/lib/TimerOne_ID131
+-I/home/azevedo/.platformio/lib/U8glib_ID7/src
+-I/home/azevedo/.platformio/lib/U8glib_ID9
+-I/home/azevedo/.platformio/lib/WebSockets_ID549/src
+-I/home/azevedo/.platformio/lib/WifiManager_ID567
+-I/home/azevedo/.platformio/lib/XPT2046_ID2928
+-I/home/azevedo/Work/r-site.net/lpp/src
+-I/home/azevedo/.platformio/lib/micro-ecc_ID1665
+-I/home/azevedo/.platformio/lib/streamFlow_ID6234/src
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/libraries/EEPROM/src
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/libraries/HID/src
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/libraries/SPI/src
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/libraries/SoftwareSerial/src
+-I/home/azevedo/.platformio/packages/framework-arduino-avr/libraries/Wire/src
+-I/home/azevedo/.platformio/packages/toolchain-atmelavr/avr/include
+-I/home/azevedo/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include
+-I/home/azevedo/.platformio/packages/toolchain-atmelavr/lib/gcc/avr/5.4.0/include-fixed
+-I/home/azevedo/.platformio/packages/tool-unity
+-DPLATFORMIO=40201
+-DARDUINO_AVR_NANO
+-DF_CPU=16000000L
+-DARDUINO_ARCH_AVR
+-DARDUINO=10808
+-D__AVR_ATmega328P__
