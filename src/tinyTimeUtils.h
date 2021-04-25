@@ -1,3 +1,4 @@
+#pragma once
 /********************
 tiny time utils
 Rui Azevedo - ruihfazevedo(@rrob@)gmail.com
@@ -11,7 +12,14 @@ namespace TinyTimeUtils {
   //time ticks as boolean
   template<int step>
   struct Tick {
-    inline operator bool() {return timeSrc()>=next?next+=step,true:false;}
+    // inline operator bool() {return timeSrc()>=next?next+=step,true:false;}
+    inline operator bool() {
+      constexpr unsigned long over=~0;
+      if (timeSrc()<next) return false;
+      if ((next+step)<next) next=over;//overflow
+      else next+=step;
+      return true;
+    }
     inline void reset() {next=timeSrc()+step;}
     inline long when() const {return next;}
   protected:
