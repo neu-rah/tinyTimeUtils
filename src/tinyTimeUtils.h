@@ -4,10 +4,22 @@ tiny time utils
 Rui Azevedo - ruihfazevedo(@rrob@)gmail.com
 */
 
+#ifndef ARDUINO
+//assume PC then
+#include <chrono>
+#endif
+
 namespace TinyTimeUtils {
 
-  //by default uses Arduino `millis` as time source
-  constexpr auto timeSrc=millis;
+  #ifdef ARDUINO
+    //use Arduino `millis` as time source
+    constexpr auto timeSrc=millis;
+  #else
+    auto timeSrc=[](){
+      return (unsigned long) std::chrono::duration_cast<std::chrono::milliseconds>
+        (std::chrono::system_clock::now().time_since_epoch()).count();
+    };
+  #endif
 
   //time ticks as boolean
   template<int step>
