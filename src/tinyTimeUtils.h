@@ -38,6 +38,34 @@ namespace TinyTimeUtils {
     unsigned long next=0;
   };
 
+  template<int step,typename T=uint16_t>
+  struct TickCnt {
+    static constexpr unsigned long over=0xFFFFFFFF;
+    operator T() {
+      unsigned long now=timeSrc();
+      T cnt=0;
+      unsigned long past=now<last?(over-last)+now:now-last;
+      // Serial.print(" step:");
+      // Serial.print(step);
+      // Serial.print(" overflow cnt:");
+      // Serial.print(cnt);
+      // Serial.print(" now:");
+      // Serial.print(now);
+      // Serial.print(" last:");
+      // Serial.print(last);
+      // Serial.print(" past:");
+      // Serial.print(past);
+      // Serial.print(" cnt:");
+      // Serial.println(cnt+(past>step?past%step:0));
+      return cnt+(past>step?past%step:0);
+    }
+    inline void reset() {last=timeSrc();}
+    inline long when() const {return last+step;}
+    protected:
+      unsigned long last=0;
+  };
+
+
   //FPS as boolean
   // this is an FPS limiter
   // will return `true` `fps` times per second (max)
