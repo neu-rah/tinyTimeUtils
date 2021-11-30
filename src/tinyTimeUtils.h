@@ -38,6 +38,24 @@ namespace TinyTimeUtils {
     unsigned long next=0;
   };
 
+  struct TimeoutAt {
+    TimeoutAt(unsigned long at):trig(false),next(at) {}
+    void set(unsigned long at) {trig=false;next=at;}
+    inline long when() const {return next;}
+    inline operator bool() {
+      return trig?true:trig=next<=timeSrc();
+    }
+  protected:
+    bool trig;
+    unsigned long next;
+  };
+
+  template<unsigned long timeout>
+  struct Timeout:TimeoutAt {
+    Timeout():TimeoutAt(timeSrc()+timeout) {}
+    inline void reset() {set(timeSrc()+timeout);}
+  };
+
   template<int step,typename T=uint16_t>
   struct TickCnt {
     static constexpr unsigned long over=0xFFFFFFFF;
