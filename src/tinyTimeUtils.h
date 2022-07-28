@@ -43,7 +43,7 @@ namespace TinyTimeUtils {
     void set(unsigned long at) {trig=false;next=at;}
     inline long when() const {return next;}
     inline operator bool() {
-      return trig?true:trig=next<=timeSrc();
+      return trig?true:(trig=next<=timeSrc());
     }
   protected:
     bool trig;
