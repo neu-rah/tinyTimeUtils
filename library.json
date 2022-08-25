@@ -9,6 +9,6 @@
     "branch": "master"
   },
   "version":"1.0.2",
-  "frameworks": "arduino",
+  "frameworks": "*",
   "platforms": "*"
 }
