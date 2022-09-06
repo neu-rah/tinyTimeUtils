@@ -103,4 +103,8 @@ namespace TinyTimeUtils {
   inline bool rblink(int timeOn,int timeOff) {
     return timeSrc()%(unsigned long)(timeOn+timeOff)<(unsigned long)timeOn;
   }
+
+  #ifndef ARDUINO
+    void delay(unsigned long ms);
+  #endif
 };
