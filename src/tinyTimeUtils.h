@@ -105,7 +105,7 @@ namespace TinyTimeUtils {
   }
 
   #ifndef ARDUINO
-    inline void delay(unsigned long ms) {
+    inline void ms_delay(unsigned long ms) {
       TimeoutAt o(timeSrc()+ms);
       while(!o);
     }

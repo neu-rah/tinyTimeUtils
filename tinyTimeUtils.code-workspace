@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "examples/no_delay_blinks"
+		},
+		{
+			"path": "examples/native"
+		}
+	],
+	"settings": {
+	}
+}
