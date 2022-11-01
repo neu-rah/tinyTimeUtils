@@ -15,7 +15,7 @@ namespace TinyTimeUtils {
     //use Arduino `millis` as time source
     constexpr auto timeSrc=millis;
   #else
-    constexpr auto timeSrc=[](){
+    auto timeSrc=[](){
       return (unsigned long) std::chrono::duration_cast<std::chrono::milliseconds>
         (std::chrono::system_clock::now().time_since_epoch()).count();
     };
