@@ -2,7 +2,7 @@
 
 Tiny easy timeouts, FPS and blinks without delay
 
-## rblibk
+## rblink
 
 runtime blink  
 return true/false on a defined on/off rate that can be adjusted at runtime
