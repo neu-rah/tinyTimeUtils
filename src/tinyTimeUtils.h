@@ -104,7 +104,9 @@ namespace TinyTimeUtils {
     return timeSrc()%(unsigned long)(timeOn+timeOff)<(unsigned long)timeOn;
   }
 
-  #ifndef ARDUINO
+  #ifdef ARDUINO
+    #define ms_delay delay
+  #else
     inline void ms_delay(unsigned long ms) {
       TimeoutAt o(timeSrc()+ms);
       while(!o);
