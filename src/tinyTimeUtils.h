@@ -4,13 +4,14 @@ tiny time utils
 Rui Azevedo - ruihfazevedo(@rrob@)gmail.com
 */
 
-#ifndef ARDUINO
-//assume PC then
-#include <chrono>
+#ifdef ARDUINO
+  #include <Arduino.h>
+#else
+  //assume PC then
+  #include <chrono>
 #endif
 
 namespace TinyTimeUtils {
-
   #ifdef ARDUINO
     //use Arduino `millis` as time source
     constexpr auto timeSrc=millis;
