@@ -20,6 +20,10 @@ namespace TinyTimeUtils {
       return (unsigned long) std::chrono::duration_cast<std::chrono::milliseconds>
         (std::chrono::system_clock::now().time_since_epoch()).count();
     };
+    constexpr const auto timeSrcUs=[](){
+      return (unsigned long) std::chrono::duration_cast<std::chrono::microseconds>
+        (std::chrono::system_clock::now().time_since_epoch()).count();
+    };
   #endif
 
   //time ticks as boolean
